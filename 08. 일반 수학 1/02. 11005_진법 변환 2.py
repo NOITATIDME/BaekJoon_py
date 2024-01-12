@@ -1,7 +1,8 @@
 N, B = map(int,input().split())
 tmp = ''
+arr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 while N:
-    tmp = str(N%B) + tmp
+    tmp += str(arr[N%B])
     N //= B
 
-print(tmp)
+print(tmp[::-1])
